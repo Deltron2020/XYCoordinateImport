@@ -1,6 +1,6 @@
 <h1>Importing XY Coordinates into Production CAMA Database</h1>
 
-<h2>Tools Used:</h2>
+<h2>Tools Used</h2>
 
 - <b>SQL</b>
 - <b>Python</b>
@@ -9,7 +9,20 @@
 - <b>Windows Task Manager</b>
 
 <h2>Description</h2>
-<b>The Powershell script in this repository is responsible for parsing out Windows Event Log information for failed RDP attacks and using a third party API to collect geographic information about the attackers location.
+<b>
+ Problem: GIS professionals manually entered hundreds of XY coordinate values into production CAMA application costing time and increasing chance of data entry errors. 
+ </b>
+<br><br>
+<b>
+ Solution: Automated the entry process by batch importing the XY coordinate values directly into the the CAMA database.
+ <br><br>
+ Quick Overview:
+ 
+  - Step 1: The GIS professionals calculate centroids for given parcels and export the calculated XY coordinates into an Excel file that is placed in a network directory.
+  - Step 2: Scheduled Task runs weekly on a VM executing a PowerShell script that checks if the Excel file is present in the network directory. If the Excel file is present, the PowerShell script kicks off the Python script.
+  - Step 3: The Python script simply reads the data in the Excel file to a Pandas dataframe, filters out any unwanted columns, and exports the dataframe as a csv file. Afterwards, the original Excel file is deleted.
+  - Step 4: Scheduled Job runs weekly via SSMS that executes a sql stored procedure. This stored procedure bulk inserts the data from the csv file into a temp table where the data is validated. After successful validation, the xy coordinate data is inserted into the production tables accessed by the CAMA application.
+
 </b>
 <br />
 <br />
@@ -22,13 +35,6 @@ look up the attackers Geolocation information and plot it on an Azure Sentinel M
 <p align="center">
 <img src="https://i.imgur.com/3d3CEwZ.png" height="85%" width="85%" alt="RDP event fail logs to iP Geographic information"/>
 </p>
-<h2>Languages Used</h2>
-
-- <b>PowerShell:</b> Extract RDP failed logon logs from Windows Event Viewer 
-
-<h2>Utilities Used</h2>
-
-- <b>ipgeolocation.io:</b> IP Address to Geolocation API
 
 <h2>Attacks from China coming in; Custom logs being output with geodata</h2>
 
