@@ -26,6 +26,12 @@
 <br />
 <br />
 
+Links to other SQL scripts involved in this process:
+- Exception Handling
+- Does File Exist
+<br />
+<br />
+
 <p align="center">
 <img src="https://i.imgur.com/3d3CEwZ.png" height="85%" width="85%" alt="RDP event fail logs to iP Geographic information"/>
 </p>
