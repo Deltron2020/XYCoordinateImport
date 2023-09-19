@@ -57,7 +57,7 @@
 
 <h2>The Good SQL Stuff</h2>
 
-The following items are present in the stored procedure:
+The following items are present in the stored procedure [sp_ImportXYCoordinates](https://github.com/Deltron2020/XYCoordinateImport/blob/main/sp_ImportXYCoordinates.sql):
 - Dynamic SQL
 - Try-Catch Error Handling
 - If / Else Logic
