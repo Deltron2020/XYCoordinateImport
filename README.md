@@ -10,16 +10,16 @@
 
 <h2>Description</h2>
 
-<b> Problem: </b> GIS professionals manually entered hundreds of XY coordinate values into production CAMA application costing time and increasing chance of data entry errors. 
+<b> Problem: </b> GIS professionals manually enter hundreds of XY coordinate values into the production CAMA application costing time and increasing chance of data entry errors. 
 <br><br>
- <b> Solution: </b> Automated the entry process by batch importing the XY coordinate values directly into the the CAMA database.
+ <b> Solution: </b> Automate the entry process & batch import the XY coordinate values directly into the the CAMA database.
  <br><br>
 <b> Quick Overview:  </b>
  
-  - <b>Step 1:</b> The GIS professionals calculate centroids for given parcels and export the calculated XY coordinates into an Excel file that is placed in a network directory.
-  - <b>Step 2:</b> Scheduled Task runs weekly on a VM executing a PowerShell script that checks if the Excel file is present in the network directory. If the Excel file is present, the PowerShell script kicks off the Python script.
+  - <b>Step 1:</b> The GIS professionals calculate and export the calculated XY coordinates into an Excel file that is placed in a network directory.
+  - <b>Step 2:</b> A scheduled task runs weekly on a VM executing a PowerShell script that checks if the Excel file is present in the network directory. If the Excel file is present, the PowerShell script kicks off the Python script.
   - <b>Step 3:</b> The Python script simply reads the data in the Excel file to a Pandas dataframe, filters out any unwanted columns, and exports the dataframe as a csv file. Afterwards, the original Excel file is deleted.
-  - <b>Step 4:</b> Scheduled Job runs weekly via SSMS that executes a sql stored procedure. This stored procedure bulk inserts the data from the csv file into a temp table where the data is validated. After successful validation, the xy coordinate data is inserted into the production tables accessed by the CAMA application.
+  - <b>Step 4:</b> A scheduled job runs weekly via SSMS that executes a sql stored procedure. This stored procedure bulk inserts the data from the csv file into a temp table where the data is validated. After successful validation, the xy coordinate values are inserted into the production tables accessed by the CAMA application.
 
 <p align="center">
 <img src="https://i.imgur.com/v0lcnGF.png" height="75%" width="75%" alt="XY Process Flowchart"/>
