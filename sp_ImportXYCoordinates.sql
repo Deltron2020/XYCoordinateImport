@@ -11,7 +11,6 @@ BEGIN
 Created on 5/15/23 to batch import X/Y Values  - Tyler T 
 
 Modified on 9/13/23 - added exception handling - TT
-  
 ========================*/  
 --DECLARE @emailAddress NVARCHAR(128) = 'example@gmail.com';  
 --DECLARE @date NVARCHAR(10) = (SELECT CAST(GETDATE() AS DATE));  
@@ -295,7 +294,7 @@ BEGIN TRY
 	BEGIN;  
   
 		PRINT 'There was no xy coordinates file - Finished'  
-		RETURN;  
+		RETURN;
   
 	END;  
 
@@ -306,7 +305,8 @@ BEGIN CATCH
 				(
 					SELECT	
 						@filePath  AS [file_path],
-						@emailAddress AS [@email_address]
+						@emailAddress AS [email_address],
+						@tran_count_on_entry AS [tran_count_on_entry]
 					FOR JSON PATH
 				);
 
