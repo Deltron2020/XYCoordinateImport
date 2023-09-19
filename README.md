@@ -55,13 +55,20 @@
 </p>
 
 
-<h2>SQL Good Stuff</h2>
+<h2>The Good SQL Stuff</h2>
 
-Links to other SQL scripts involved in this process:
-- Exception Handling
-- Does File Exist
+The following items are present in the stored procedure:
+- Dynamic SQL
+- Try-Catch Error Handling
+- If / Else Logic
+- Update / Insert
+- #Temp Tables
+- Commit / Rollback Transactions
+- Send DB Mail
 
-- 
+Links to SQL scripts involved in this process:
+- Exception Handling Table & Stored Procedure
+- Does File Exist Function
 
 <!--
  ```diff
