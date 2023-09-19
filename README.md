@@ -28,11 +28,6 @@
 <h2>Screenshots</h2>
 *** For the sake of security, any email addresses, network paths, and anything deemed potentially sensitive will be removed from production code & screenshots *** .
 <br />
-<br />
-
-Links to other SQL scripts involved in this process:
-- Exception Handling
-- Does File Exist
 
 <h3>Original Excel File with X/Y Coordinates</h3>
 <p align="center">
@@ -59,6 +54,14 @@ Links to other SQL scripts involved in this process:
 <img src="https://i.imgur.com/xm0u7dn.png" height="85%" width="85%" alt="XY Excel File"/>
 </p>
 
+
+<h2>SQL Good Stuff</h2>
+
+Links to other SQL scripts involved in this process:
+- Exception Handling
+- Does File Exist
+
+- 
 
 <!--
  ```diff
