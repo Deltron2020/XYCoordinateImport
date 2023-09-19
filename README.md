@@ -64,6 +64,7 @@ The following items are present in the stored procedure [sp_ImportXYCoordinates]
 - Update / Insert
 - #Temp Tables
 - Commit / Rollback Transactions
+- Data Validation
 - Send DB Mail
 
 Links to SQL scripts involved in this process:
