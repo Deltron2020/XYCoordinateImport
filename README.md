@@ -68,8 +68,8 @@ The following items are present in the stored procedure [sp_ImportXYCoordinates]
 - Send DB Mail
 
 Links to SQL scripts involved in this process:
-- Exception Handling Table & Stored Procedure
-- Does File Exist Function
+- [Exception Handling Table & Stored Procedure](https://github.com/Deltron2020/ExceptionHandling)
+- [Does File Exist Function](https://github.com/Deltron2020/doesFileExist)
 
 <!--
  ```diff
