@@ -36,22 +36,22 @@
 
 <h3>Windows Task</h3>
 <p align="center">
-<img src="https://i.imgur.com/X0g4X4p.png" height="85%" width="85%" alt="XY Excel File"/>
+<img src="https://i.imgur.com/X0g4X4p.png" height="85%" width="85%" alt="Windows Task"/>
 </p>
 
 <h3>SSMS Job</h3>
 <p align="center">
-<img src="https://i.imgur.com/Nw1ISAk.png" height="85%" width="85%" alt="XY Excel File"/>
+<img src="https://i.imgur.com/Nw1ISAk.png" height="85%" width="85%" alt="SSMS Job"/>
 </p>
 
 <h3>CSV to CAMA</h3>
 <p align="center">
-<img src="https://i.imgur.com/zPx0t5i.png" height="85%" width="85%" alt="XY Excel File"/>
+<img src="https://i.imgur.com/zPx0t5i.png" height="85%" width="85%" alt="CSV to CAMA"/>
 </p>
 
 <h3>Email Notification</h3>
 <p align="center">
-<img src="https://i.imgur.com/xm0u7dn.png" height="85%" width="85%" alt="XY Excel File"/>
+<img src="https://i.imgur.com/xm0u7dn.png" height="85%" width="85%" alt="Email Notification"/>
 </p>
 
 
