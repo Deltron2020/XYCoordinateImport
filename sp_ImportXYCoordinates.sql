@@ -2,6 +2,7 @@ IF OBJECT_ID('dbo.sp_ImportXYCoordinates') IS NOT NULL
 BEGIN
 	DROP PROCEDURE dbo.sp_ImportXYCoordinates
 END
+GO
 
 CREATE PROCEDURE dbo.sp_ImportXYCoordinates (@filePath NVARCHAR(256), @emailAddress NVARCHAR(128))
 AS
